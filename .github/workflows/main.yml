@@ -24,7 +24,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     # This step runs the deploy command from the 'serverless' NPM framework, 
-    # this is not a GitHub nor an AWS command.
+    # this is not a GitHub nor an AWS command
     - name: serverless deploy
       uses: serverless/github-action@master
       with:
