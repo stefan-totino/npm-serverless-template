@@ -1,0 +1,13 @@
+service: npm-serverless-template
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  hello:
+    handler: src/handler.hello
