@@ -1,31 +1,33 @@
 #
 # https://github.com/serverless/github-action
+# https://www.youtube.com/watch?v=oFYFqOzJdqY&t=14s
 #
-
 name: Deploy main branch to AWS Lambda
-
 on:
   push:
     branches:
       - main
-
 jobs:
   deploy:
+    # operating system and NodeJS
     name: deploy
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.x]
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: serverless deploy
-      uses: serverless/github-action@v3.1
-      with:
-        args: deploy
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      # dependencies
+      # - run: npm ci
+      # AWS
+      - name: serverless deploy
+        uses: serverless/github-action@v3.1
+        with:
+          args: deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

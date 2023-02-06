@@ -1,7 +1,3 @@
-/*
-** https://www.youtube.com/watch?v=oFYFqOzJdqY&t=14s
-*/
-
 'use strict';
 
 module.exports.hello = async (event) => {
