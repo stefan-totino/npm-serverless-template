@@ -21,13 +21,15 @@ https://www.serverless.com/framework/docs/providers/aws/guide/intro (i found thi
 
 After a successful npm installation, we can create the basis for a code repository like this one by navigating to an empty directory and running a command like this:
 
+## [ii] *template*
+
  `serverless create --template aws-nodejs`
  
- ## [ii] *credentials*
+ ## [iii] *credentials*
  
  https://www.serverless.com/framework/docs/providers/aws/guide/credentials
  
- ## [iii] *deployment*
+ ## [iV] *deployment*
  
  https://www.serverless.com/framework/docs/providers/aws/guide/deploying
  
