@@ -8,7 +8,7 @@ For more information on the framework, start here:
 
 https://www.npmjs.com/package/serverless
 
-https://github.com/serverless/serverless
+https://www.serverless.com/framework/docs
 
 For more information on the paradigm of serverless itself:
 
