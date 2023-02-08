@@ -1,30 +1,16 @@
-#
-# https://www.npmjs.com/package/serverless
-# https://blog.logrocket.com/going-serverless-node-js-apps/
-# AmazonAPIGatewayAdministrator
-#
 service: npm-serverless-template
 frameworkVersion: "3"
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: dev
   region: us-east-1
 functions:
-  productAPI:
-    handler: Controller/products.handler
+  web-resourceAPI:
+    handler: ./web-resources.handler
     events:
       - http:
-          path: /index
-          method: get
-      - http:
-          path: /
-          method: post
-      - http:
-          path: /
-          method: get
-      - http:
-          path: /{productId}
+          path: /index.html
           method: get
 plugins:
   - serverless-offline
