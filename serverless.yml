@@ -1,5 +1,6 @@
 #
 # https://www.npmjs.com/package/serverless
+# https://blog.logrocket.com/going-serverless-node-js-apps/
 #
 service: npm-serverless-template
 frameworkVersion: "3"
@@ -9,5 +10,21 @@ provider:
   stage: dev
   region: us-east-1
 functions:
-  hello:
-    handler: src/handler.hello
+  productAPI:
+    handler: Controller/products.handler
+    events:
+      - http:
+          path: /index
+          method: get
+      - http:
+          path: /
+          method: post
+      - http:
+          path: /
+          method: get
+      - http:
+          path: /{productId}
+          method: get
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
