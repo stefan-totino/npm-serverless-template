@@ -19,7 +19,13 @@
 ### [iv] *commands*
  
 *[how to run the app in dev. and what requests it accepts]*
- 
+
+The *"serverless"* code package is a popular and well maintained tool on NPM. It is neccessary for building, deploying, and tesing ZECTR-EXPORT. It can be installed and made available globally as a CLI using the following command:
+
+`npm install serverless -g`
+
+
+
 # Tech Stack
  
 compute | cloud provider | framework | runtime
