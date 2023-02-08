@@ -1,6 +1,7 @@
 #
 # https://www.npmjs.com/package/serverless
 # https://blog.logrocket.com/going-serverless-node-js-apps/
+# AmazonAPIGatewayAdministrator
 #
 service: npm-serverless-template
 frameworkVersion: "3"
