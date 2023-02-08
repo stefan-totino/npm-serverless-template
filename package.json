@@ -1,5 +1,5 @@
 {
-  "name": "zectr-export",
+  "name": "npm-serverless-template",
   "version": "1.0.0",
   "description": "*[summary of the application]*",
   "main": "handler.js",
